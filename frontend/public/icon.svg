@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="100%" stop-color="#161d31"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bgGradient)"/>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+  <circle cx="256" cy="256" r="160" fill="url(#accentGrad)" opacity="0.15" filter="url(#glow)"/>
+  <path d="M140 370V142h45l71 138 71-138h45v228h-38V210l-63 122h-30l-63-122v160h-38z" fill="url(#accentGrad)" filter="url(#glow)"/>
+  <circle cx="390" cy="350" r="16" fill="#06b6d4"/>
+</svg>
