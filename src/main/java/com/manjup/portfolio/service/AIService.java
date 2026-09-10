@@ -80,7 +80,7 @@ public class AIService {
     }
 
     private String callGeminiApi(String userPrompt) throws Exception {
-        String endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + geminiApiKey;
+        String endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
 
         String combinedPrompt = RESUME_CONTEXT + "\n\nUser Question: " + userPrompt;
         String escapedPrompt = combinedPrompt.replace("\\", "\\\\")
@@ -93,6 +93,7 @@ public class AIService {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endpoint))
                 .header("Content-Type", "application/json")
+                .header("x-goog-api-key", geminiApiKey)
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .timeout(Duration.ofSeconds(6))
                 .build();
