@@ -1,4 +1,10 @@
 export default function Projects({ projects }) {
+  // The API can contain old duplicate seed records. Render each project once.
+  const uniqueProjects = projects.filter(
+    (project, index, allProjects) =>
+      allProjects.findIndex((candidate) => candidate.name === project.name) === index
+  );
+
   return (
     <section className="section" id="projects">
       <div className="container">
@@ -16,7 +22,7 @@ export default function Projects({ projects }) {
         </div>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
+          {uniqueProjects.map((project, index) => (
             <article className="project-card" key={project.id || project.name}>
               <div className="project-card-header">
                 <span className="project-index">PROJ-0{index + 1}</span>

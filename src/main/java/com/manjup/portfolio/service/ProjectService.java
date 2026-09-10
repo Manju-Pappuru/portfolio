@@ -42,9 +42,9 @@ public class ProjectService {
                 ),
                 new Project(
                         "Anonymous Mental Health and Stress Support Portal",
-                        "An anonymous student and counselor communication platform with secure, real-time support workflows.",
+                        "An anonymous student and counselor support platform with secure, real-time communication and a Gemini-powered AI assistant.",
                         List.of("MongoDB", "Express.js", "React.js", "Node.js", "JWT", "REST APIs", "Gemini API"),
-                        List.of("Anonymous communication", "JWT authentication", "Bcrypt encryption", "Real-time chat", "Issue tracking", "Severity-based and role-based access", "100+ user records"),
+                        List.of("Anonymous communication", "JWT authentication", "Bcrypt encryption", "Real-time chat", "Gemini-powered AI assistant", "Issue tracking", "Severity-based and role-based access", "100+ user records"),
                         "https://github.com/Manju-Pappuru",
                         ""
                 )
